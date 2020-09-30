@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/carView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_90"
+    cardView:cardCornerRadius="@dimen/dp_8"
+    cardView:cardElevation="@dimen/dp_8"
+    android:layout_margin="@dimen/dp_8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:fontFamily="sans-serif-black"
+            android:textSize="@dimen/sp_20"/>
+
+        <TextView
+            android:id="@+id/userEmailAddressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:id="@+id/userCreationTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/sp_18"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

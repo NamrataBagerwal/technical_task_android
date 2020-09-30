@@ -9,4 +9,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="server_unavailable_error_msg">Error fetching data from Server. Please try again pulling down to Refresh.</string>
 </resources>
