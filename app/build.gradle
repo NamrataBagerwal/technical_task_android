@@ -25,6 +25,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+            buildConfigField("String", "BEARER_TOKEN", "\"0c5c7838cf8c24550582a73abd82fb230103fa9d1f2e8a85dc4482a965799887\"")
+            buildConfigField("String", 'BASE_URL', "\"https://gorest.co.in/public-api/\"")
+        }
     }
     compileOptions {
         sourceCompatibility VERSIONS_BUILD.JAVA_VERSION
@@ -40,5 +47,8 @@ android {
         }
 
         animationsDisabled = true
+    }
+    dataBinding {
+        enabled true
     }
 }

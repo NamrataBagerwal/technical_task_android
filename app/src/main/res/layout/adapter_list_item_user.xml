@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:cardView="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/carView"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_90"
-    cardView:cardCornerRadius="@dimen/dp_8"
-    cardView:cardElevation="@dimen/dp_8"
-    android:layout_margin="@dimen/dp_8">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="user"
+            type="com.android_dev_challenge.sliide.remote_repository.webservice.get_user.GetUserApiResponse.User" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_8"
+        cardView:cardCornerRadius="@dimen/dp_8"
+        cardView:cardElevation="@dimen/dp_8">
 
-        <TextView
-            android:id="@+id/userNameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_8"
-            android:fontFamily="sans-serif-black"
-            android:textSize="@dimen/sp_20"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/userEmailAddressTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_8"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="@dimen/sp_18"/>
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="sans-serif-black"
+                android:text="@{user.name}"
+                android:textSize="@dimen/sp_20" />
 
-        <TextView
-            android:id="@+id/userCreationTimeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_8"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="@dimen/sp_18"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/userEmailAddressTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="sans-serif-medium"
+                android:text="@{user.email}"
+                android:textSize="@dimen/sp_18" />
 
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/userCreationTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="sans-serif-medium"
+                android:text="@{user.createdAt}"
+                android:textSize="@dimen/sp_18" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
